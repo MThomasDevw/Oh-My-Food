@@ -1,0 +1,32 @@
+@import "../Base/Polices";
+
+header{
+    display: flex;
+    align-items: center;
+    .arrow-left{
+        position: absolute;
+        padding-left: 10%;
+    }
+}
+.images{
+    width: 100%;
+}
+.Menu{
+    display: flex;
+    flex-direction: column;
+    border-radius: 33px;
+    margin-top: -3em;
+    position: relative;
+    background: #f6f6f6;
+    .name{
+        display:flex;
+        align-items: center;
+        h1{
+            margin-right: auto;
+            margin-left: 5%;
+        }
+        i{
+            padding-right: 8%;
+        }
+    }
+}
