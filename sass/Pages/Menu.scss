@@ -1,32 +1,88 @@
-@import "../Base/Polices";
-
+@use "../Base/Polices";
+@use "../Utils/variables";
 header{
     display: flex;
     align-items: center;
-    .arrow-left{
+    a{
         position: absolute;
         padding-left: 10%;
     }
 }
-.images{
+.images img{
     width: 100%;
 }
 .Menu{
     display: flex;
     flex-direction: column;
-    border-radius: 33px;
+    border-radius: 33px 33px 0px 0px;
     margin-top: -3em;
     position: relative;
     background: #f6f6f6;
-    .name{
-        display:flex;
+    .Name{
+        display:grid;
         align-items: center;
         h1{
             margin-right: auto;
             margin-left: 5%;
+            font-family: $font-family-logo;
+            font-size: x-large;
+            font-weight: 500;
         }
-        i{
-            padding-right: 8%;
+        .fa-regular{
+            grid-column: 2/2;
+            grid-row: 1/2;
+            display: flex;
+            justify-content: center;
+            font-size: x-large;            
+        }
+        .fa-solid{
+            grid-column: 2/2;
+            grid-row: 1/2;
+            display: flex;
+            justify-content: center;
+            font-size: x-small;
+            color: #f6f6f6;
+            &:hover
+            {
+                color: red;
+                transform: scale(2.5);
+                transition: 0.1s ease-in-out;
+            }            
         }
     }
+}
+        h2{
+            font-family: $font-family-title;
+            margin: 3% 0% 0% 5%;
+            border-bottom: 4px solid #9fe3d2;
+            width: 12%;
+            font-size: large;
+            font-weight: 100;
+        }
+.elements-menu{
+    margin: 0% 5% 0% 5%;
+    .menu-description{
+        display:flex;
+        border-radius: 14px;
+        background: white;
+        box-shadow: 1px 2px 10px #b7b7b7;
+        margin: 5% 0% 5% 0%;
+    }
+    .dishes-name{
+        margin-right: auto;
+        margin-left: 3%;
+        h3{
+            margin: 5% 0% 2% 0%;
+        }
+        p{
+            margin: 2% 0% 5% 0%;
+        }
+    }
+    p.price{
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+        margin: 2% 5% 4% 0%;
+        font-weight: bold;
+    }    
 }

@@ -17,8 +17,9 @@ header{
             font-family: $font-family-logo;
         }
     }
+}   
     
-    .location{
+.location{
         display: flex;
         align-items: center;
         justify-content: center;
@@ -30,7 +31,6 @@ header{
         p{
             padding-left: 3%;
         }
-    }
 }
 .explore{
     display: flex;
@@ -74,6 +74,8 @@ header{
     h2{
         margin-left: 7%;
         margin-top: 10%;
+        border: none;
+        font-weight: bold;
     }
     .choice{
         display: flex;
@@ -121,6 +123,8 @@ header{
     h2{
         margin-left: 7%;
         padding-top: 10%;
+        border: none;
+        font-weight: bold;
     }
     .Restaurants-elements{
         display: flex;
@@ -173,6 +177,7 @@ header{
             align-items: center;
             margin-right: 6%;
             font-size: 2em;
+            
         }
     }
     
