@@ -44,8 +44,11 @@ header{
             color: #f6f6f6;
             &:hover
             {
-                color: red;
-                transform: scale(2.5);
+                background: -webkit-gradient(linear, left top, right bottom,from(#ff79da), to(#9356dc));
+                background: -webkit-linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
+	            -webkit-background-clip: text;
+	            -webkit-text-fill-color: transparent;
+                transform: scale(2.6);
                 transition: 0.1s ease-in-out;
             }            
         }

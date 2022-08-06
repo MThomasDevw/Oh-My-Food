@@ -50,7 +50,7 @@ header{
 .button {
         width: 50%;
         max-width: 50%;
-        margin: 7% 0% 14% 0%;
+        margin: 3rem auto;
         background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
         color: white;
         flex-wrap: nowrap;
@@ -153,7 +153,7 @@ header{
         }
     }
     .elements-text{
-        display: flex;
+        display: grid;
         margin-left: 3%;
         .elements-name{
             margin-right: auto;
@@ -164,21 +164,32 @@ header{
             P{
                 margin-top: 3%;
             }
-            i{
-                color: $secondary-color;
-                &:active{
-                    background: #ae6eff;
-                    transition: 0.2s ease-in-out;
-                }
+        }
+        .fa-regular{
+                grid-column: 2/2;
+                grid-row: 1/2;
+                display: flex;
+                justify-content: center;
+                font-size: x-large;
+                align-items: center;            
             }
-        }
-        .ratings{
-            display: flex;
-            align-items: center;
-            margin-right: 6%;
-            font-size: 2em;
-            
-        }
+        .fa-solid{
+                grid-column: 2/2;
+                grid-row: 1/2;
+                display: flex;
+                justify-content: center;
+                font-size: x-small;
+                color: #f6f6f6;
+                align-items: center;
+                &:hover{
+                    background: -webkit-gradient(linear, left top, right bottom,from(#ff79da), to(#9356dc));
+                    background: -webkit-linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    transform: scale(2.8);
+                    transition: 0.1s ease-in-out;
+                }        
+            }                   
     }
     
 }
