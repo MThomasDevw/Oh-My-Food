@@ -89,6 +89,15 @@ header .border-logo #logo {
   border-radius: 30px;
   box-shadow: 2px 4px #e1e1e1;
   background: #f6f6f6;
+  transition: 0.2s ease-in-out;
+}
+.fonctioning .choice:hover, .fonctioning .degustation:hover, .fonctioning .composition:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  transform: scale(1.05);
+  background: #f5edff;
+}
+.fonctioning .choice:hover i, .fonctioning .degustation:hover i, .fonctioning .composition:hover i {
+  color: #ae6eff;
 }
 .fonctioning .choice .number, .fonctioning .degustation .number, .fonctioning .composition .number {
   display: flex;
@@ -136,15 +145,14 @@ header .border-logo #logo {
 }
 .Restaurants .Restaurants-elements .banner {
   position: absolute;
-  left: 17.1em;
-  margin-top: 14px;
+  right: 2.5em;
+  margin-top: 1.3em;
   background: #99e2d0;
   color: #008665;
   border-radius: 3px;
-  opacity: 0.9;
 }
 .Restaurants .Restaurants-elements .banner p {
-  margin: 4px;
+  margin: 6px 10px 6px 10px;
 }
 .Restaurants .Restaurants-elements img {
   object-fit: cover;
@@ -243,6 +251,9 @@ header a {
 
 .images img {
   width: 100%;
+  height: 17em;
+  max-height: 17em;
+  object-fit: cover;
 }
 
 .Menu {
@@ -306,16 +317,56 @@ h2 {
   background: white;
   box-shadow: 1px 2px 10px #b7b7b7;
   margin: 5% 0% 5% 0%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: 0;
+  animation: slideup 1s forwards;
+  animation-delay: 0.4s;
+}
+.elements-menu .menu-description:hover .fa-solid {
+  rotate: 360deg;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s ease-in-out;
+}
+.elements-menu .menu-description:hover .border-check {
+  width: 4em;
+  opacity: 100;
+}
+.elements-menu .menu-description .border-check {
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  width: 0;
+  transition: transform 0.4s ease-in-out, width 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  justify-content: center;
+  border-radius: 0px 14px 14px 0px;
+  background: #99e2d0;
+  cursor: pointer;
+}
+.elements-menu .menu-description .border-check .fa-solid {
+  color: white;
+  font-size: 1.6em;
 }
 .elements-menu .dishes-name {
+  display: flex;
+  flex-direction: column;
   margin-right: auto;
   margin-left: 3%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .elements-menu .dishes-name h3 {
-  margin: 5% 0% 2% 0%;
+  margin: 13px 0px 5px 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .elements-menu .dishes-name p {
-  margin: 2% 0% 5% 0%;
+  margin: 5px 0px 13px 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .elements-menu p.price {
   display: flex;
@@ -323,6 +374,10 @@ h2 {
   flex-direction: column-reverse;
   margin: 2% 5% 4% 0%;
   font-weight: bold;
+}
+
+.menu-description:nth-child(2) {
+  animation-delay: 1s;
 }
 
 /*# sourceMappingURL=style.css.map */
