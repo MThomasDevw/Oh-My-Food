@@ -15,11 +15,21 @@ body a {
 header .border-logo {
   margin: 5%;
 }
+@media only screen and (min-width: 992px) {
+  header .border-logo {
+    margin: 3%;
+  }
+}
 header .border-logo #logo {
   display: flex;
   width: 48%;
   margin: auto;
   font-family: "Shrikhand", cursive;
+}
+@media only screen and (min-width: 992px) {
+  header .border-logo #logo {
+    width: 80%;
+  }
 }
 
 .location {
@@ -35,6 +45,11 @@ header .border-logo #logo {
 .location p {
   padding-left: 3%;
 }
+@media only screen and (min-width: 992px) {
+  .location p {
+    padding-left: 1%;
+  }
+}
 
 .explore {
   display: flex;
@@ -47,9 +62,20 @@ header .border-logo #logo {
   text-align: center;
   margin: 6% 13% 0px 13%;
 }
+@media only screen and (min-width: 992px) {
+  .explore h1 {
+    margin: 2% 0% 0% 0%;
+    font-size: xx-large;
+  }
+}
 .explore p {
   text-align: center;
   margin: 11px 25px 0px 25px;
+}
+@media only screen and (min-width: 992px) {
+  .explore p {
+    font-size: medium;
+  }
 }
 
 .button {
@@ -67,19 +93,40 @@ header .border-logo #logo {
   transition: 0.2s ease-in-out;
   cursor: pointer;
 }
+@media only screen and (min-width: 992px) {
+  .button {
+    width: 30%;
+    max-width: 30%;
+  }
+}
 .button:hover {
   filter: brightness(1.1);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
 }
 
 .fonctioning {
   font-family: "Roboto", sans-serif;
+}
+@media only screen and (min-width: 992px) {
+  .fonctioning {
+    display: flex;
+    margin: 2%;
+    flex-wrap: wrap;
+  }
 }
 .fonctioning h2 {
   margin-left: 7%;
   margin-top: 10%;
   border: none;
   font-weight: bold;
+}
+@media only screen and (min-width: 992px) {
+  .fonctioning h2 {
+    margin: 0% 61% 4% 2%;
+    font-size: xx-large;
+  }
 }
 .fonctioning .choice, .fonctioning .degustation, .fonctioning .composition {
   display: flex;
@@ -91,13 +138,22 @@ header .border-logo #logo {
   background: #f6f6f6;
   transition: 0.2s ease-in-out;
 }
+@media only screen and (min-width: 992px) {
+  .fonctioning .choice, .fonctioning .degustation, .fonctioning .composition {
+    width: 25%;
+    max-width: 25%;
+    margin: 0% 4% 0% 4%;
+  }
+}
 .fonctioning .choice:hover, .fonctioning .degustation:hover, .fonctioning .composition:hover {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
   transform: scale(1.05);
   background: #f5edff;
+  transition: 0.2s ease-in-out;
 }
 .fonctioning .choice:hover i, .fonctioning .degustation:hover i, .fonctioning .composition:hover i {
   color: #ae6eff;
+  transition: 0.2s ease-in-out;
 }
 .fonctioning .choice .number, .fonctioning .degustation .number, .fonctioning .composition .number {
   display: flex;
@@ -129,11 +185,25 @@ header .border-logo #logo {
   font-family: "Roboto", sans-serif;
   padding-bottom: 7%;
 }
+@media only screen and (min-width: 992px) {
+  .Restaurants a {
+    display: inline-grid;
+    margin: 1%;
+    flex-wrap: wrap;
+  }
+}
 .Restaurants h2 {
   margin-left: 7%;
   padding-top: 10%;
   border: none;
   font-weight: bold;
+}
+@media only screen and (min-width: 992px) {
+  .Restaurants h2 {
+    margin-left: 4%;
+    padding-top: 2%;
+    font-size: xx-large;
+  }
 }
 .Restaurants .Restaurants-elements {
   display: flex;
@@ -142,17 +212,17 @@ header .border-logo #logo {
   border-radius: 20px;
   box-shadow: #f4f4f4 4px 4px 1px;
   background: white;
+  transition: 0.2s ease-in-out;
 }
-.Restaurants .Restaurants-elements .banner {
-  position: absolute;
-  right: 2.5em;
-  margin-top: 1.3em;
-  background: #99e2d0;
-  color: #008665;
-  border-radius: 3px;
+@media only screen and (min-width: 992px) {
+  .Restaurants .Restaurants-elements {
+    width: 36em;
+    height: 20em;
+  }
 }
-.Restaurants .Restaurants-elements .banner p {
-  margin: 6px 10px 6px 10px;
+.Restaurants .Restaurants-elements:hover {
+  transform: scale(1.02);
+  transition: 0.2s ease-in-out;
 }
 .Restaurants .Restaurants-elements img {
   object-fit: cover;
@@ -160,12 +230,33 @@ header .border-logo #logo {
   border-radius: 20px 20px 0 0;
   width: 100%;
 }
+@media only screen and (min-width: 992px) {
+  .Restaurants .Restaurants-elements img {
+    height: 15em;
+  }
+}
+.Restaurants .banner {
+  position: absolute;
+  right: 2.5em;
+  margin-top: 1.3em;
+  background: #99e2d0;
+  color: #008665;
+  border-radius: 3px;
+}
+.Restaurants .banner p {
+  margin: 6px 10px 6px 10px;
+}
 .Restaurants .elements-text {
   display: grid;
   margin-left: 3%;
 }
 .Restaurants .elements-text .elements-name {
   margin-right: auto;
+}
+@media only screen and (min-width: 768px) {
+  .Restaurants .elements-text .elements-name {
+    padding-right: 20em;
+  }
 }
 .Restaurants .elements-text .elements-name h3 {
   margin-bottom: 0;
@@ -243,10 +334,18 @@ header .border-logo #logo {
 header {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 header a {
   position: absolute;
   padding-left: 10%;
+}
+header a:hover {
+  font-size: xx-large;
+  background: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
+  background: -webkit-linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .images img {
@@ -319,9 +418,13 @@ h2 {
   margin: 5% 0% 5% 0%;
   overflow: hidden;
   text-overflow: ellipsis;
-  opacity: 0;
-  animation: slideup 1s forwards;
-  animation-delay: 0.4s;
+  animation-duration: 1s;
+  -moz-animation-name: show;
+  -webkit-animation-name: show;
+  animation-delay: 2s;
+  animation: show 1s 1s ease-in-out;
+  animation-fill-mode: backwards;
+  transition: all 1s ease-in-out;
 }
 .elements-menu .menu-description:hover .fa-solid {
   rotate: 360deg;
@@ -364,7 +467,7 @@ h2 {
   text-overflow: ellipsis;
 }
 .elements-menu .dishes-name p {
-  margin: 5px 0px 13px 0px;
+  margin: 5px 0px 13px 1px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -376,8 +479,19 @@ h2 {
   font-weight: bold;
 }
 
-.menu-description:nth-child(2) {
+.elements-menu:nth-child(1) {
   animation-delay: 1s;
+}
+
+@keyframes show {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
