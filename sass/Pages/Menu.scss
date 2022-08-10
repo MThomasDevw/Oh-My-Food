@@ -3,10 +3,16 @@
 header{
     display: flex;
     align-items: center;
-    justify-content: center;
+    @media only screen and (min-width: 992px){
+                justify-content: center;
+            }
+    
     a{
         position: absolute;
         padding-left: 10%;
+        @media only screen and (min-width: 768px){
+            left: 1%;
+        }
     &:hover{
         font-size: xx-large;
         background: -webkit-gradient(linear, left top, right bottom,from(#ff79da), to(#9356dc));
@@ -21,6 +27,10 @@ header{
     height: 17em;
     max-height: 17em;
     object-fit: cover;
+    @media only screen and (min-width: 768px){
+        height: 29em;
+        max-height: 29em;
+    }
 }
 .Menu{
     display: flex;
@@ -38,13 +48,19 @@ header{
             font-family: $font-family-logo;
             font-size: x-large;
             font-weight: 500;
+            @media only screen and (min-width: 768px){
+                margin-right: 12em;
+            }
         }
         .fa-regular{
             grid-column: 2/2;
             grid-row: 1/2;
             display: flex;
             justify-content: center;
-            font-size: x-large;            
+            font-size: x-large;
+            @media only screen and (min-width: 768px){
+                font-size: xx-large;
+            }            
         }
         .fa-solid{
             grid-column: 2/2;
@@ -61,6 +77,10 @@ header{
 	            -webkit-text-fill-color: transparent;
                 transform: scale(2.6);
                 transition: 0.1s ease-in-out;
+                @media only screen and (min-width: 768px){
+                    
+                    font-size: small;
+                }
             }            
         }
     }
@@ -75,6 +95,12 @@ header{
         }
 .elements-menu{
     margin: 0% 5% 0% 5%;
+    @media only screen and (min-width: 768px){
+        margin: 0%;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
     
     .menu-description{
         display:flex;
@@ -91,6 +117,10 @@ header{
        animation: show 1s 1s ease-in-out;
        animation-fill-mode: backwards;
        transition: all 1s ease-in-out;
+       @media only screen and (min-width: 768px){
+        width: 23em;
+        margin: 2%;
+    }
         &:hover .fa-solid{
             rotate: 360deg;
             display: flex;
