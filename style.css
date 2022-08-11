@@ -4,28 +4,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 .loading-spinner {
-  border-radius: 50px;
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
-  animation-fill-mode: both;
+  animation: spinout 1s ease-in-out;
   animation-delay: 3s;
-  position: absolute;
+  animation-fill-mode: both;
+  position: fixed;
   background: white;
   justify-content: center;
 }
 
+@keyframes spinout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    position: initial;
+  }
+}
 .loading-spinner:after {
   content: "";
   width: 50px;
   height: 50px;
   position: absolute;
-  border-top: 6px solid black;
   border-radius: 50px;
   border: 6px solid transparent;
-  border-top-color: #9356DC;
   animation: spin 1.2s ease-in-out infinite;
+  border-top-color: #9356DC;
 }
 
 .loading-spinner:before {
@@ -33,11 +41,10 @@
   width: 50px;
   height: 50px;
   position: absolute;
-  border-bottom: 6px solid black;
   border-radius: 50px;
   border: 6px solid transparent;
-  border-bottom-color: #FF79DA;
   animation: spin 1.2s ease-in-out infinite;
+  border-bottom-color: #FF79DA;
 }
 
 @keyframes spin {
@@ -48,15 +55,6 @@
     transform: rotate(360deg);
   }
 }
-body {
-  font-family: "roboto";
-  margin: 0;
-}
-body a {
-  text-decoration: none;
-  color: black;
-}
-
 @media only screen and (min-width: 768px) {
   header {
     justify-content: center;
@@ -172,16 +170,16 @@ header .border-logo #logo {
   border: none;
   font-weight: bold;
 }
-@media only screen and (min-width: 992px) {
-  .fonctioning h2 {
-    margin: 0% 61% 4% 2%;
-    font-size: xx-large;
-  }
-}
 @media only screen and (min-width: 768px) {
   .fonctioning h2 {
     margin: 0% 61% 4% 3%;
     font-size: x-large;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .fonctioning h2 {
+    margin: 0% 61% 4% 1%;
+    font-size: xx-large;
   }
 }
 .fonctioning .choice, .fonctioning .degustation, .fonctioning .composition {
@@ -280,8 +278,19 @@ header .border-logo #logo {
 }
 @media only screen and (min-width: 992px) {
   .Restaurants h2 {
-    margin-left: 4%;
+    margin-left: 3%;
     font-size: xx-large;
+  }
+}
+@keyframes restaurant {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 .Restaurants .Restaurants-elements {
@@ -292,6 +301,9 @@ header .border-logo #logo {
   box-shadow: #f4f4f4 4px 4px 1px;
   background: white;
   transition: 0.2s ease-in-out;
+  position: relative;
+  animation: restaurant 3.3s ease-in-out;
+  animation-delay: 0s;
 }
 @media only screen and (min-width: 992px) {
   .Restaurants .Restaurants-elements {
@@ -325,7 +337,12 @@ header .border-logo #logo {
 }
 @media only screen and (min-width: 768px) {
   .Restaurants .banner {
-    right: 4.5em;
+    right: 2.5em;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .Restaurants .banner {
+    right: 1.5em;
   }
 }
 .Restaurants .banner p {
@@ -358,6 +375,12 @@ header .border-logo #logo {
   font-size: x-large;
   align-items: center;
 }
+.Restaurants .elements-text .fa-regular:hover {
+  background: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
+  background: -webkit-linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .Restaurants .elements-text .fa-solid {
   grid-column: 2/2;
   grid-row: 1/2;
@@ -372,96 +395,8 @@ header .border-logo #logo {
   background: -webkit-linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transform: scale(2.8);
+  font-size: x-large;
   transition: 0.1s ease-in-out;
-}
-
-.footer-elements {
-  background: #353535;
-}
-@media only screen and (min-width: 768px) {
-  .footer-elements {
-    display: flex;
-    flex-direction: column;
-  }
-}
-.footer-elements h3 {
-  color: white;
-  font-family: "Shrikhand", cursive;
-  font-style: italic;
-  font-weight: 100;
-  margin: 0;
-  padding: 7% 0% 0% 6%;
-}
-@media only screen and (min-width: 768px) {
-  .footer-elements h3 {
-    padding: 2% 0% 0% 6%;
-  }
-}
-.footer-elements .footer-text {
-  padding-top: 2%;
-  padding-bottom: 8%;
-}
-@media only screen and (min-width: 768px) {
-  .footer-elements .footer-text {
-    display: flex;
-    padding-left: 5%;
-  }
-}
-.footer-elements ul {
-  list-style-type: none;
-  margin-bottom: 0;
-  margin-top: 2%;
-  padding-left: 6%;
-}
-@media only screen and (min-width: 768px) {
-  .footer-elements ul {
-    width: 13em;
-  }
-}
-.footer-elements ul li {
-  color: white;
-}
-.footer-elements ul li a {
-  color: white;
-}
-.footer-elements .proposition i {
-  font-size: 70%;
-}
-.footer-elements .proposition a {
-  margin-left: 2%;
-}
-.footer-elements .partner i {
-  font-size: 70%;
-}
-.footer-elements .partner a {
-  margin-left: 1%;
-}
-
-header {
-  display: flex;
-  align-items: center;
-}
-@media only screen and (min-width: 992px) {
-  header {
-    justify-content: center;
-  }
-}
-header a {
-  position: absolute;
-  padding-left: 10%;
-}
-@media only screen and (min-width: 768px) {
-  header a {
-    left: 1%;
-  }
-}
-header a:hover {
-  font-size: xx-large;
-  background: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
-  background: -webkit-linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .images img {
@@ -491,7 +426,7 @@ header a:hover {
 }
 .Menu .Name h1 {
   margin-right: auto;
-  margin-left: 5%;
+  margin-left: 7%;
   font-family: "Shrikhand", cursive;
   font-size: x-large;
   font-weight: 500;
@@ -499,6 +434,8 @@ header a:hover {
 @media only screen and (min-width: 768px) {
   .Menu .Name h1 {
     margin-right: 12em;
+    font-size: xx-large;
+    margin-left: 3%;
   }
 }
 .Menu .Name .fa-regular {
@@ -542,6 +479,11 @@ h2 {
   width: 12%;
   font-size: large;
   font-weight: 100;
+}
+@media only screen and (min-width: 768px) {
+  h2 {
+    margin: 3% 0% 0% 3%;
+  }
 }
 
 .elements-menu {
@@ -643,6 +585,104 @@ h2 {
     transform: translateY(0);
     opacity: 1;
   }
+}
+body {
+  font-family: "roboto";
+  margin: 0;
+}
+body a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header a {
+  position: absolute;
+  padding-left: 10%;
+  left: 1%;
+}
+header a:hover {
+  font-size: xx-large;
+  background: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
+  background: -webkit-linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer-elements {
+  background: #353535;
+}
+@media only screen and (min-width: 768px) {
+  .footer-elements {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.footer-elements h3 {
+  color: white;
+  font-family: "Shrikhand", cursive;
+  font-style: italic;
+  font-weight: 100;
+  margin: 0;
+  padding: 7% 0% 0% 6%;
+}
+@media only screen and (min-width: 768px) {
+  .footer-elements h3 {
+    padding: 2% 0% 0% 6%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .footer-elements h3 {
+    padding: 2% 0% 0% 3%;
+  }
+}
+.footer-elements .footer-text {
+  padding-top: 2%;
+  padding-bottom: 8%;
+}
+@media only screen and (min-width: 768px) {
+  .footer-elements .footer-text {
+    display: flex;
+    padding-left: 5%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .footer-elements .footer-text {
+    justify-content: space-around;
+  }
+}
+.footer-elements ul {
+  list-style-type: none;
+  margin-bottom: 0;
+  margin-top: 2%;
+  padding-left: 6%;
+}
+@media only screen and (min-width: 768px) {
+  .footer-elements ul {
+    width: 12em;
+  }
+}
+.footer-elements ul li {
+  color: white;
+}
+.footer-elements ul li a {
+  color: white;
+}
+.footer-elements .proposition i {
+  font-size: 70%;
+}
+.footer-elements .proposition a {
+  margin-left: 2%;
+}
+.footer-elements .partner i {
+  font-size: 70%;
+}
+.footer-elements .partner a {
+  margin-left: 1%;
 }
 
 /*# sourceMappingURL=style.css.map */
