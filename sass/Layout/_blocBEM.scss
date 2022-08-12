@@ -4,15 +4,15 @@ body{
     a{
         text-decoration: none;
         color: black;
-        
     }
 }
 header{
     display: flex;
     align-items: center;
     justify-content: center;
-            
-    
+    @media only screen and (min-width:  768px){
+        justify-content: center; 
+    }
     a{
         position: absolute;
         padding-left: 10%;
@@ -24,6 +24,21 @@ header{
 	    -webkit-background-clip: text;
 	    -webkit-text-fill-color: transparent;
     }
+    }
+    .border-logo{
+        margin: 5%;
+        @media only screen and (min-width: 992px){
+            margin: 3%;
+        }
+            #logo{
+            display: flex;
+            width: 48%;
+            margin: auto;
+            font-family: $font-family-logo;
+            @media only screen and (min-width: 768px){
+                width: 80%;
+            }
+        }
     }
 }
 .footer-elements{

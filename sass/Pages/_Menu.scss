@@ -33,33 +33,23 @@
             }
         }
         .fa-regular{
-            grid-column: 2/2;
-            grid-row: 1/2;
-            display: flex;
-            justify-content: center;
+            @include display-icon-hearth;
             font-size: x-large;
             @media only screen and (min-width: 768px){
                 font-size: xx-large;
             }            
         }
         .fa-solid{
-            grid-column: 2/2;
-            grid-row: 1/2;
-            display: flex;
-            justify-content: center;
-            font-size: x-small;
+            @include display-icon-hearth;
+            font-size: 16px;
             color: #f6f6f6;
             &:hover
             {
-                background: -webkit-gradient(linear, left top, right bottom,from(#ff79da), to(#9356dc));
-                background: -webkit-linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
-	            -webkit-background-clip: text;
-	            -webkit-text-fill-color: transparent;
-                transform: scale(2.6);
-                transition: 0.1s ease-in-out;
-                @media only screen and (min-width: 768px){
-                    
-                    font-size: small;
+                @include color-icon-hearth;
+                transition: 0.2s cubic-bezier(0.4, 0, 1, 1) ;
+                font-size: 2.2em;
+                @media only screen and (max-width: 767px){
+                    font-size: 1.6em;
                 }
             }            
         }
@@ -96,10 +86,10 @@
        animation-duration: 1s;
        -moz-animation-name:show;
        -webkit-animation-name:show;
-       animation-delay: 2s;
-       animation: show 1s 1s ease-in-out;
+       animation: show 1s 0.5s ease-in-out;
        animation-fill-mode: backwards;
        transition: all 1s ease-in-out;
+       cursor: pointer;
        @media only screen and (min-width: 768px){
         width: 23em;
         margin: 2%;
