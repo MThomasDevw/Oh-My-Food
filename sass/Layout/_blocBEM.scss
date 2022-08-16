@@ -64,10 +64,6 @@ header{
     .footer-text{
         padding-top: 2%;
         padding-bottom: 8%;
-        @media only screen and (min-width: 768px){
-            display: flex;
-            padding-left: 5%;
-        }
         @media only screen and (min-width: 992px){
             justify-content: space-around;
         }

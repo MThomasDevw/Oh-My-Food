@@ -481,7 +481,6 @@ h2 {
   margin: 5% 0% 5% 0%;
   overflow: hidden;
   text-overflow: ellipsis;
-  animation-duration: 1s;
   -moz-animation-name: show;
   -webkit-animation-name: show;
   animation: show 1s forwards;
@@ -654,12 +653,6 @@ header .border-logo #logo {
 .footer-elements .footer-text {
   padding-top: 2%;
   padding-bottom: 8%;
-}
-@media only screen and (min-width: 768px) {
-  .footer-elements .footer-text {
-    display: flex;
-    padding-left: 5%;
-  }
 }
 @media only screen and (min-width: 992px) {
   .footer-elements .footer-text {
