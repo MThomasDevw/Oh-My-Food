@@ -670,6 +670,11 @@ header .border-logo #logo {
     width: 12em;
   }
 }
+@media only screen and (min-width: 992px) {
+  .footer-elements ul {
+    padding-left: 3%;
+  }
+}
 .footer-elements ul li {
   color: white;
 }
