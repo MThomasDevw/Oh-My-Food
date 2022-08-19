@@ -10,6 +10,9 @@
     position: fixed;
     background: white;
     justify-content: center;  
+    h2{
+        display: none;
+    }
 } 
 @keyframes spinout{
     0%{
@@ -298,7 +301,7 @@
                 color: #f6f6f6;
                 &:hover{
                     @include color-icon-hearth;
-                    font-size: x-large;
+                    font-size: 26px;
                     transition: 0.2s cubic-bezier(0.4, 0, 1, 1);
                 }        
             }          

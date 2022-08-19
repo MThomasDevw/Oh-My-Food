@@ -14,6 +14,9 @@
   background: white;
   justify-content: center;
 }
+.loading-spinner h2 {
+  display: none;
+}
 
 @keyframes spinout {
   0% {
@@ -369,7 +372,7 @@
   background: -webkit-linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: x-large;
+  font-size: 26px;
   transition: 0.2s cubic-bezier(0.4, 0, 1, 1);
 }
 
