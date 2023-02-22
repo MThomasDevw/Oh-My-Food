@@ -1,3 +1,4 @@
+@use "../Utils/variables";
 @mixin loading {
     content:"";
     width: 50px;
@@ -8,8 +9,8 @@
     animation:spin 1.2s ease-in-out infinite;
 }
 @mixin color-icon-hearth {
-    background: -webkit-gradient(linear, left top, right bottom,from(#ff79da), to(#9356dc));
-    background: -webkit-linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
+    background: -webkit-gradient(linear, left top, right bottom,from($secondary-color), to($primary-color));
+    background: -webkit-linear-gradient(162deg, $secondary-color 0%, $primary-color 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
